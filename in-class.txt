@@ -1,0 +1,65 @@
+const wrapper = document.querySelector("#wrapper");
+// // arrays starts at 0, not 1. 'apples' is 0, 'bananas' is 1, 'peaches' is 2.
+// const list = ["apples", "bananas", "peaches", "oranges", "grapes"];
+
+// objects can contain multiple pieces of information, attributes
+const list = [
+    { 
+        name: "Apples",
+        category: "Fruit",
+        price: 2
+    },
+    {
+        name: "Carrots",
+        category: "Vegetable",
+        price: 3
+    }
+];
+
+function renderItems(){
+    // "" clears out the wrapper everytime renderItems is run rather than the function showing the previous output again.
+    wrapper.innerHTML = '';
+    list.forEach((item, idx) => {
+        const ele = document.createElement("div");
+        const header = document.createElement("h1");
+        const deleteEle = document.createElement("button");
+        
+        deleteEle.addEventListener("click", ()=>{
+            // first number (0) represents which item to get rid of, second number (1) represents how many items you want to get rid of. 
+            list.splice(idx,1);
+            renderItems();
+        })
+        
+        deleteEle.innerHTML = "X";
+        ele.style.color = "blue";
+        // item is the first "" in the list. In this case, 'apples'
+        header.innerHTML = item.name;
+        category.innerHTML = item.category;
+        // takes something that doesn't exist and creates it on the html.
+        ele.appendChild(header);
+        ele.appendChild(category);
+        ele.appendChild(deleteEle);
+        wrapper.appendChild(ele);
+    })
+}
+
+renderItems();
+
+document.getElementById("submit").addEventListener("click", ()=>{
+    const obj ={
+        name:document.getElementById("name").value
+    }
+    // push adds "" to array without having to manually add it to the array.
+    list.push(obj);
+    renderItems;
+})
+
+// let sum = 10;
+// let neg = 1;
+// let currentSum = sum - neg
+// const btn = document.createElement("button");
+// let newEle = document.createElement("div");
+
+// wrapper.appendChild(btn);
+
+// console.log (currentSum);
