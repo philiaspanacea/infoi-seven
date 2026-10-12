@@ -1,0 +1,47 @@
+* {
+    margin: 0 auto;
+}
+
+#wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div {
+    margin: 50px;
+}
+
+#input {
+    display: block;
+    justify-self: center;
+    align-items: center;
+    font-size: 25px;
+}
+
+#input p {
+    margin-bottom: 20px;
+}
+
+#evolution {
+    height: 30px;
+    width: 120px;
+    font-size: 18px;
+    border: none;
+    background-color: rgb(189, 236, 191);
+    border-radius: 30px;
+    padding: 5px;
+}
+
+#btn {
+    height: 30px;
+    width: 60px;
+    font-size: 15px;
+    border: none;
+    background-color: rgb(189, 236, 191);
+    border-radius: 30px;
+}
+
+#btn:hover {
+    background-color: rgb(151, 204, 154);
+}

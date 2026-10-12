@@ -51,9 +51,10 @@ document.getElementById("submit").addEventListener("click", ()=>{
     }
     // push adds "" to array without having to manually add it to the array.
     list.push(obj);
-    renderItems;
+    renderItems();
 })
 
+// ----------------------------------------
 // let sum = 10;
 // let neg = 1;
 // let currentSum = sum - neg
